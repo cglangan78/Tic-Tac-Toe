@@ -1,0 +1,51 @@
+
+.gameboard{
+  text-align: center;
+}
+
+.box {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border: black 2px solid;
+  display: inline-block;
+}
+
+#button{
+  font-size: 30px;
+  color: purple;
+  float: right;
+  background-color: white;
+  border: solid black 5px;
+
+}
+
+
+
+/*#cross{
+  width: 100px;
+}*/
+
+/*#doughnut{
+  width: 100px;
+}*/
+
+.cross{
+  display: inline-block;
+  border: 2px purple dashed;
+  background-color: orchid;
+  font-size: 100px;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.nought{
+  display: inline-block;
+  border: 2px black solid;
+  background-color: lightgrey;
+  font-size: 100px;
+  color: white;
+  width: 100px;
+  height: 100px;
+}

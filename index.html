@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="gameboard">
+      <div class="box" id= "box1" ></div>
+          <!-- <img id="cross" src="https://pbs.twimg.com/profile_images/587655889307467776/l2mCLs0q_400x400.jpg"> -->
+      <div class="box" id= "box2" ></div>
+        <!-- <img id="doughnut" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT95CPSOHT5R2tU11wNqFEaEOvl92rxfyJkZjsDAAJq-zRKChs79A"> -->
+      <div class="box" id= "box3"  ></div>
+      <br>
+      <div class="box" id= "box4" ></div>
+      <div class="box" id= "box5" ></div>
+      <div class="box" id= "box6" ></div>
+      <br>
+      <div class="box" id= "box7" ></div>
+      <div class="box" id= "box8" ></div>
+      <div class="box" id= "box9" ></div>
+
+
+      <!-- <button id="click-to-reset">Reset Gameboard</button> -->
+
+
+
+    </div>
+
+  <button id="button" onclick=myFunction()>Clear The Board</button>
+
+    <script type="text/javascript">
+      var counter = 0;
+      var boxes = document.querySelectorAll('.box');
+      // var boxValue = document.querySelectorAll('data-value');
+
+
+      // var resetButton = document.querySelector('#reset')
+      // var mybox = document.querySelector('.box')
+      // boxes.addEventListener('click', function(){
+        // console.log(boxes);
+    //   // });
+    //
+    // //  for (var i = 0; i < boxes.length; i++) {
+    //    boxes[i].addEventListener('click', function(){
+    //      console.log(this);
+    //       // selectedBox.innertext = 'x';
+    //     //  console.log('you are clicking me')
+    //    });
+    //  }
+
+
+    for (var i = 0; i < boxes.length; i++) {
+        setSquare(boxes[i]);
+          console.log(i);
+    }
+
+
+      function setSquare(el){
+        el.addEventListener('click', function(){
+          console.log('counter', counter);
+        if (el.className === "box") {
+          if (counter % 2 === 0) {
+            el.className = "cross";
+            el.innerHTML = '<img src="https://pbs.twimg.com/profile_images/587655889307467776/l2mCLs0q_400x400.jpg" height ="100" width ="100">';
+            // el.innerHTML = "X"
+          } else {
+            el.className = "nought";
+            el.innerHTML = '<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT95CPSOHT5R2tU11wNqFEaEOvl92rxfyJkZjsDAAJq-zRKChs79A" height ="100" width ="100">';
+            // el.innerHTML = "O"
+          }
+          console.log(el);
+
+          counter = counter + 1;
+        }
+
+        if  (boxes[0].className === "cross" && boxes[1].className === "cross" && boxes[2].className === "cross" ||
+            boxes[3].className === "cross" && boxes[4].className === "cross" && boxes[5].className === "cross" ||
+            boxes[6].className === "cross" && boxes[7].className === "cross" && boxes[8].className === "cross" ||
+            boxes[0].className === "cross" && boxes[3].className === "cross" && boxes[6].className === "cross" ||
+            boxes[1].className === "cross" && boxes[4].className === "cross" && boxes[7].className === "cross" ||
+            boxes[2].className === "cross" && boxes[5].className === "cross" && boxes[8].className === "cross" ||
+            boxes[6].className === "cross" && boxes[4].className === "cross" && boxes[2].className === "cross" ||
+            boxes[0].className === "cross" && boxes[4].className === "cross" && boxes[8].className === "cross") {
+              alert('Player "X" Wins');
+              myFunction();
+            }
+        else if (boxes[0].className === "nought" && boxes[1].className === "nought"  && boxes[2].className === "nought"  ||
+            boxes[3].className === "nought"  && boxes[4].className === "nought" && boxes[5].className === "nought" ||
+            boxes[6].className === "nought" && boxes[7].className === "nought" && boxes[8].className === "nought" ||
+            boxes[0].className === "nought" && boxes[3].className === "nought" && boxes[6].className === "nought" ||
+            boxes[1].className === "nought" && boxes[4].className === "nought" && boxes[7].className === "nought" ||
+            boxes[2].className === "nought" && boxes[5].className === "nought" && boxes[8].className === "nought" ||
+            boxes[6].className === "nought" && boxes[4].className === "nought" && boxes[2].className === "nought" ||
+            boxes[0].className === "nought" && boxes[4].className === "nought" && boxes[8].className === "nought") {
+              alert('Player "O" Wins');
+              myFunction();
+            }
+
+      });
+
+      myFunction = function() {
+          if (counter < 10){
+            console.log('nine');
+                document.location.href = '';
+         counter = counter + 1;
+          }
+
+         console.log('win');}
+
+       }
+
+
+
+        </script>
+
+    </body>
+
+  </html>
+
+              <!-- //
+              // function toWin(el)  {
+              //   if(el.className === "cross"){
+              //     if(box === '' && boxes === "nought")
+              //         console.log('toWin')
+              //       }
+              //
+
+
+
+
+//         if (
+//           document.getElementById('box1')) {
+//           if(value === '1') {
+//             return 1;
+//          }
+// }
+
+    // var valueX = document.getElementById("box1")
+    //   // boxValue = value.innerHTML;
+    //     console.log(valueX);
+
+
+
+
+
+//
+//
+//
+//
+//   <footer id="footerText">
+//         <div id="button">
+//             var reset = "clear";
+//             function reset() {
+//
+//             }
+//
+//
+//           <button idonClick="clearBoard(".boardgame")">Clear Game Board</button>
+//             button.addEventListener("click", myScript);
+//
+//         </div>
+//   </footer> -->
